@@ -7,7 +7,7 @@ def index():
     # Page d'accueil simple avec instructions
     return '<h1>Bienvenue !</h1><p>Utilisez le chemin /hello/VOTRE_NOM dans l\'URL.</p>'
 
-@app.route('/hello/laura')
+@app.route('/hello/<string:name>')
 def hello(name):
     # La variable 'name' vient directement du chemin de l'URL
     # Utilisation de f-string pour l'intégration directe

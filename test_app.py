@@ -16,7 +16,7 @@ def test_root_path(client):
     response = client.get('/')
     assert response.status_code == 200
     assert b'<h1>Bienvenue !</h1>' in response.data
-    assert b'/hello/laura' in response.data
+    assert b'/hello/VOTRE_NOM' in response.data
 
 def test_hello_with_name_parameter(client):
     """Teste la route '/hello/<name>' avec un nom spécifique."""
